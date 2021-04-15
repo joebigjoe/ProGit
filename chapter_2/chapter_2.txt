@@ -1,0 +1,7 @@
+PROGIT 第二章
+
+git repository的来源
+1. 把一个没有被git manage的folder变成一个全新的repository
+2. clone一个其他地方的repository
+
+
