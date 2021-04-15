@@ -1,0 +1,14 @@
+git remote -v
+查看当前project的origin
+
+windows上的ssh-agent服务默认的是disable的
+把它开启来，然后
+ssh-add id_ed25519
+把你根据自己的密码方式的ssh的key加进去
+
+git command used on chapter 1
+git init
+git status
+
+
+
