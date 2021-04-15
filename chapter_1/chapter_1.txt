@@ -16,3 +16,76 @@ git@github.com:joebigjoe/ProGit.git
 在git里做得操作基本上都是添加操作 add
 
 git的三种状态 modified, staged, and committed
+这三种状态都是针对local db而言的
+modified 被修改但是还没有commit的文件，使用git status看是红色的文件，它对应的是 the working tree, 你正在干活的那棵树
+staged 被修改了，准备commit的文件，，使用git status看是绿色的文件， 它对应的是 the staging area， 你准备commit的区域， 也叫做indexing
+committed 已经commit到local db的文件，使用git status看不到的文件， 它对应的是 the .git directory 你坐在的有.git 文件的文件夹，.git是一个隐藏文件夹，对应着你所有的为本地修改的内容。
+
+当你学会了所有的command line
+你就可以在GUI tool里边游刃有余，反之则并不亦然。
+
+Yum Package Manager has been replaced by DNF Package Manager since many long-standing issues in Yum remain unresolved.
+所以再使用centos的时候，要开始使用最新的DNF。
+
+RPM_Based Fedora RHEL CnetOS
+sudo dnf install git-all
+
+Debian_Based Ubuntu
+sudo apt install git-all
+
+Mac and Windows 直接下载包安装
+Mac dmg
+Windows exe
+
+git config --system 针对所有用户
+git config --global 针对当前用户的所有repository
+git config --local 针对当前的repository
+
+git config --list --show-origin
+this will show all the config on each level
+some example:
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Users/Joey_Jane/.gitconfig      user.email=xxxx@yy.com
+file:C:/Users/Joey_Jane/.gitconfig      user.name=XXX YYY
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.symlinks=false
+file:.git/config        core.ignorecase=true
+file:.git/config        remote.origin.url=git@github.com:joebigjoe/ProGit.git
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config        branch.master.remote=origin
+file:.git/config        branch.master.merge=refs/heads/master
+file:.git/config        user.name=joe big joe
+file:.git/config        user.email=abc@xyz.com
+
+设置默认编辑器
+我喜欢notepad++, 如此设置
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+
+三种help方法
+git help config
+git config --help
+man git-config 		manpage是只属于linux的，Windows使用前两个
+config可以换成其他任何命令
+
+git config -h
+是段版本的帮助文件，类似-h是短版本的--help
+
+
+
+
+
+
+
