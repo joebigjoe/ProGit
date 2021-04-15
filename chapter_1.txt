@@ -8,3 +8,7 @@ git是分布式VCS版本控制系统
 在断网的情况下依然可以完美的工作。
 
 git使用SHA-1 hash来确保任何的修改都被记录下来。
+
+my test origin
+this is from my current account 4123*******
+git@github.com:joebigjoe/ProGit.git

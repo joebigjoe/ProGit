@@ -9,6 +9,14 @@ ssh-add id_ed25519
 git command used on chapter 1
 git init
 git status
+git commit -m "initial commit for progit book reading and learning."
+git remote -v
 
+设置ssh key到github
+https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent 
 
+git remote set-url origin git@github.com:joebigjoe/ProGit.git
+git remote add origin git@github.com:joebigjoe/ProGit.git
+是使用的 add
+而不是使用 set-url，set-url用于修改？
 
