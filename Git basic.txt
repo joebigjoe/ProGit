@@ -20,3 +20,6 @@ git remote add origin git@github.com:joebigjoe/ProGit.git
 是使用的 add
 而不是使用 set-url，set-url用于修改？
 
+git push -u origin master
+-u 用来当远程github没有远程branch的时候
+这个命令说明我只创建了repository，连基本的master branch都没有创建。

@@ -12,3 +12,7 @@ git使用SHA-1 hash来确保任何的修改都被记录下来。
 my test origin
 this is from my current account 4123*******
 git@github.com:joebigjoe/ProGit.git
+
+在git里做得操作基本上都是添加操作 add
+
+git的三种状态 modified, staged, and committed
