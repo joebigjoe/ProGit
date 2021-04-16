@@ -55,6 +55,17 @@ git diff --staged
 git difftool --tool-help
 比较工具
 
+commit你的修改
+git commit 
+会打开你设置的默认core.editor
+
+git commit -m "this is a commit message"
+把信息直接打在命令行
+
+git commit -a -m "this is a commit with no add"
+-a 会把所有change的文件都commit到本地repository
+
+
 
 
 
