@@ -98,13 +98,57 @@ usage: git rm [<options>] [--] <file>...
     -r                    allow recursive removal
     --ignore-unmatch      exit with a zero status even if nothing matched
 
+重命名文件
+git mv name_a name_b
 
+D:\Study_2021\Git\ProGit>git mv README README.md
 
+D:\Study_2021\Git\ProGit>git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    README -> README.md
 
+等价于
+ren README.md README
+git rm README.md
+git add README
 
+查看git commit的历史
+git log 
 
+只用一行显示
+git log --oneline
 
+显示每次commit的简短信息
+git log --stat
+
+美化打印
+git log --pretty=oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+
+patch信息
+git log -p -2
+最近两个patch的信息
+
+图形化显示
+在有branch的时候好用，显示branch合并运动轨迹？
+git log --graph
+
+只显示当前文件夹下的改变
+git log -- chapter_2
+
+两周之内的改变
+git log --since=2.weeks
+
+相关code内容的变化，这个没搞太清楚
+git log -S functionname
+git log -S FirebaseAnalysis.py
+
+类似于一个search功能
+git log --grep .gitignore
 
 
 
