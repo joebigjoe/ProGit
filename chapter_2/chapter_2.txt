@@ -66,6 +66,28 @@ git commit -a -m "this is a commit with no add"
 -a 会把所有change的文件都commit到本地repository
 但是这个不会把以前ignore的文件加进去
 
+删除文件
+del FirebaseAnalysis.py
+git status
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    FirebaseAnalysis.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git commit -a "delete file FirebaseAnalysis.py"
+
+git rm FirebaseAnalysis.py
+会把文件直接从硬盘删除
+需要再做一次git commit来使working tree clean
+
+git rm --cached FirebaseAnalysis.py
+不把文件直接从硬盘删除，只把文件变成untracked
+
+
+
+
+
 
 
 
