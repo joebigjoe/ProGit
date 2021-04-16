@@ -5,3 +5,16 @@ git repository的来源
 2. clone一个其他地方的repository
 
 
+全新的git
+git init
+
+克隆其他的repository
+git clone
+所有的为文件的历史和版本都被搞到本地
+所以叫克隆
+
+git clone可以修改文件夹的名字
+git clone https://github.com/libgit2/libgit2 mylibgit
+
+
+
