@@ -150,6 +150,17 @@ git log -S FirebaseAnalysis.py
 类似于一个search功能
 git log --grep .gitignore
 
+修改最近一次的commit
+git commit --amend
+这个命令也会同样的commit
+只是commit之前可以add一些丢掉的文件和修改typo
+
+场景：
+git commit -m "add a bunch of files"
+git add missingfile.txt
+git commit --amend
+上次和谷歌合作的经历，就是这样搞了几次。
+
 
 
 
