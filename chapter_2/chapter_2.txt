@@ -64,6 +64,7 @@ git commit -m "this is a commit message"
 
 git commit -a -m "this is a commit with no add"
 -a 会把所有change的文件都commit到本地repository
+但是这个不会把以前ignore的文件加进去
 
 
 
