@@ -83,6 +83,20 @@ git rm FirebaseAnalysis.py
 
 git rm --cached FirebaseAnalysis.py
 不把文件直接从硬盘删除，只把文件变成untracked
+需要再做一次git commit来使working tree clean
+
+此时cached和staged 不能通用
+synonyms 同义但不同通用
+git rm --staged FirebaseAnalysis.py
+error: unknown option `staged'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
 
 
 
