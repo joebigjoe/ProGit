@@ -45,6 +45,17 @@ add = "add precisely this content to the next commit" rather than "Add this file
 短状态
 git status -s
 
+查看不同
+git diff
+查看working tree与staged area的不同
+
+git diff --staged
+查看staged与本地 git repository的不同
+
+git difftool --tool-help
+比较工具
+
+
 
 
 
