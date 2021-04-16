@@ -16,5 +16,37 @@ git clone
 git clone可以修改文件夹的名字
 git clone https://github.com/libgit2/libgit2 mylibgit
 
+bona fide = genuine; real.
+
+查看repository的状态
+git status
+
+实验：
+echo "This is learning note for ProGit" > README
+git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README
+
+git add README
+git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README
+
+git restore --staged README
+git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README
+
+add = "add precisely this content to the next commit" rather than "Add this file to the project"
+
+短状态
+git status -s
+
+
+
+
 
 
