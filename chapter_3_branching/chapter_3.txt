@@ -1,2 +1,37 @@
 第三章 branching
 the killer feature of git
+
+============================================
+此节点之前的内容是我们创建这个branch的时刻
+master所保存的snapshot
+我们创建branch应该是在我们想map的branch完成所有的commit之后，要不然就会丢掉下边的东西
+我创建chapter3_branch_testing的时候 master还有下边的东西没有commit
+也就是说我建branch建造了。
+我要在这些东西都commit之后再建立我自己的branch，这些东西就不会丢了。
+branch 是指向你创建branch的时候的最近的一次commit的snapshot。 再次验证了一次。
+
+----------------------------------------------------
+branch是指向某个commit snapshot的指针。
+
+the master branch 并不是特殊的branch。
+只是被默认创建而已，没有人去care去修改它而已。
+
+创建一个新的branch
+git branch chapter3_branch_testing
+
+HEAD 一个特殊的指针
+指向的是你当前的branch的位置
+chapter3_branch_testing
+---------------------------------------------------
+
+-----
+    |
+-----
+里的东西是从master 拷贝过来的
+下边才是我的增加的内容：
+但是现在的commit会到新的branch里边
+
+HEAD 一个特殊的指针
+指向的是你当前的branch的位置
+git log --oneline --decorate
+ab25e52 (HEAD -> chapter3_branch_testing) initial commit for chapter 3
