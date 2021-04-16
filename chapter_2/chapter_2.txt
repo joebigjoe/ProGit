@@ -387,6 +387,38 @@ Enter passphrase for key '/c/Users/Joey_Jane/.ssh/id_ed25519':
 git remote rename origin og
 git remote rename og origin
 
+Tag
+打标签
+git tag
+git tag -a V1.0.2 -m "Chapter 2 of progit"
+
+tag可以在push之后再加
+这时候要和checksum绑定
+git log --oneline
+在第一章的末尾加上tag，第一章最后的checksum是156e0fe
+git tag -a V1.0.1 -m "the first charpter of ProGit" 156e0fe
+
+tag默认不被push到remote repository
+如果需要可以加推
+推单纯的tag
+git push origin V1.0.2
+推所有的tag
+git push origin --tags
+
+delete本地tag
+git tag -d V1.0.2
+
+delete remote tag
+git push origin --delete V1.0.2
+
+Git aliases
+给你的长命令起个别名
+git config --global alias.ci commit
+
+这个时候 git ci = git commit
+
+
+
 
 
 
