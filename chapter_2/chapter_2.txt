@@ -160,6 +160,239 @@ git commit -m "add a bunch of files"
 git add missingfile.txt
 git commit --amend
 上次和谷歌合作的经历，就是这样搞了几次。
+PROGIT 第二章
+
+git repository的来源
+1. 把一个没有被git manage的folder变成一个全新的repository
+2. clone一个其他地方的repository
+
+
+全新的git
+git init
+
+克隆其他的repository
+git clone
+所有的为文件的历史和版本都被搞到本地
+所以叫克隆
+
+git clone可以修改文件夹的名字
+git clone https://github.com/libgit2/libgit2 mylibgit
+
+bona fide = genuine; real.
+
+查看repository的状态
+git status
+
+实验：
+echo "This is learning note for ProGit" > README
+git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README
+
+git add README
+git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README
+
+git restore --staged README
+git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README
+
+add = "add precisely this content to the next commit" rather than "Add this file to the project"
+
+短状态
+git status -s
+
+查看不同
+git diff
+查看working tree与staged area的不同
+
+git diff --staged
+查看staged与本地 git repository的不同
+
+git difftool --tool-help
+比较工具
+
+commit你的修改
+git commit 
+会打开你设置的默认core.editor
+
+git commit -m "this is a commit message"
+把信息直接打在命令行
+
+git commit -a -m "this is a commit with no add"
+-a 会把所有change的文件都commit到本地repository
+但是这个不会把以前ignore的文件加进去
+
+删除文件
+del FirebaseAnalysis.py
+git status
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    FirebaseAnalysis.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git commit -a "delete file FirebaseAnalysis.py"
+
+git rm FirebaseAnalysis.py
+会把文件直接从硬盘删除
+需要再做一次git commit来使working tree clean
+
+git rm --cached FirebaseAnalysis.py
+不把文件直接从硬盘删除，只把文件变成untracked
+需要再做一次git commit来使working tree clean
+
+此时cached和staged 不能通用
+synonyms 同义但不同通用
+git rm --staged FirebaseAnalysis.py
+error: unknown option `staged'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+重命名文件
+git mv name_a name_b
+
+D:\Study_2021\Git\ProGit>git mv README README.md
+
+D:\Study_2021\Git\ProGit>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    README -> README.md
+
+等价于
+ren README.md README
+git rm README.md
+git add README
+
+查看git commit的历史
+git log 
+
+只用一行显示
+git log --oneline
+
+显示每次commit的简短信息
+git log --stat
+
+美化打印
+git log --pretty=oneline
+git log --pretty=format:"%h - %an, %ar : %s"
+
+patch信息
+git log -p -2
+最近两个patch的信息
+
+图形化显示
+在有branch的时候好用，显示branch合并运动轨迹？
+git log --graph
+
+只显示当前文件夹下的改变
+git log -- chapter_2
+
+两周之内的改变
+git log --since=2.weeks
+
+相关code内容的变化，这个没搞太清楚
+git log -S functionname
+git log -S FirebaseAnalysis.py
+
+类似于一个search功能
+git log --grep .gitignore
+
+修改最近一次的commit
+git commit --amend
+这个命令也会同样的commit
+只是commit之前可以add一些丢掉的文件和修改typo
+
+场景：
+git commit -m "add a bunch of files"
+git add missingfile.txt
+git commit --amend
+上次和谷歌合作的经历，就是这样搞了几次。
+
+git commit --amend 不是修复，而是直接取代上次的修改，上次的修改不会再出现在历史里边
+git commit --amend 只能修改local repository
+那些push的东西的修改会影响其他的callaborator
+
+git reset HEAD FirebaseAnalysis.py
+git restore --staged chapter_2/chapter_2.txt
+把git add到staging的code 返回到初始状态。
+
+所有我们commit的东西理论上都可以被找回，根据git的data recovery
+但是那些没有被commit的丢失就可能是永久的。
+
+git restore chapter_2/chapter_2.txt
+去掉--staged 就是把没有add的修改revert掉
+
+与远程的remote repository一起工作
+D:\Study_2021\Git\ProGit>git remote
+origin
+
+D:\Study_2021\Git\ProGit>git remote -v
+origin  git@github.com:joebigjoe/ProGit.git (fetch)
+origin  git@github.com:joebigjoe/ProGit.git (push)
+
+添加 remote repository
+git remote add origin_py git@github.com:joebigjoe/Python.git
+
+删除 remote repository
+git remote remove origin_py
+
+fetch and pull
+fetch只是单纯的把代码拉下来，不会和你已经work的代码merge，这个适用于第一次把所有的代码都拉下来，clone会自己建好origin
+pull会把当前你工作的branch代码拉下来并与你点前本地的代码进行merge
+
+记下来先，有用
+If you want the default behavior of git (fast-forward if possible, else create a merge commit): git config --global pull.rebase "false"
+If you want to rebase when pulling: git config --global pull.rebase "true"
+
+push之前，一定要fetch别人的代码，把别人的代码和自己的合并。然后再push合并后的代码。
+从英文上push和pull是相反的
+再git里这两个也是相反的。
+push的时候会声明branch，pull的时候会默认的把当前的working branch上的东西下载下来
+git push <remote> <branch>
+
+fetch的英文意思取来的意思
+我很清楚的记得英文课本里的例子是叫一条狗去把扔出去的飞盘捡回来。
+
+查看remote的状态
+git remote show origin
+Warning: Permanently added the RSA host key for IP address '192.30.255.113' to the list of known hosts.
+Enter passphrase for key '/c/Users/Joey_Jane/.ssh/id_ed25519':
+* remote origin
+  Fetch URL: git@github.com:joebigjoe/ProGit.git
+  Push  URL: git@github.com:joebigjoe/ProGit.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+本地的origin可以被重命名
+git remote rename origin og
+git remote rename og origin
+
+
+
+
+
+
+
 
 
 
