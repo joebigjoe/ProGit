@@ -35,3 +35,29 @@ HEAD 一个特殊的指针
 指向的是你当前的branch的位置
 git log --oneline --decorate
 ab25e52 (HEAD -> chapter3_branch_testing) initial commit for chapter 3
+
+====================================================
+this is the work i done when i at home and on my Centos client
+shold be fine to continue read this book.
+
+the first thing i do when i clone the code:
+git remote show origin
+it shows all the branch
+
+then i check out chapter3_branch_testing
+git checkout chapter3_branch_testing
+
+to see all the branches, you can also use another command
+git log -all
+git log --all --oneline --decorate
+
+swich branch will change the files on your working folder.
+if git can not do it cleanly, it will not let you proceed.
+git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+	chapter_3_branching/chapter_3.txt
+Please commit your changes or stash them before you switch branches.
+
+it will show errors or warning, so you would notice ans take actions.
+
+
