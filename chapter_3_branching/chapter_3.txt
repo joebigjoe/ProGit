@@ -12,3 +12,9 @@ git branch chapter3_branch_testing
 HEAD 一个特殊的指针
 指向的是你当前的branch的位置
 
+========================================
+add some modification on master branch and commit
+so master branch also moving forward after the creation of branch chapter3_branch_testing
+as as test for future merging
+========================================
+
