@@ -60,4 +60,7 @@ Please commit your changes or stash them before you switch branches.
 
 it will show errors or warning, so you would notice ans take actions.
 
-
+git log --oneline --decorate  --graph --all 
+--graph will show you how far away you diverge from the master branch
+or any branch you based on
+ 
