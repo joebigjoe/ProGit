@@ -290,3 +290,7 @@ so check the fetch and pull command.
 test fetch.
 
 =======================================
+
+this is add on master to test rebase on windows PC
+
+=======================================
