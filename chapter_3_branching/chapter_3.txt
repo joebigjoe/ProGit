@@ -79,3 +79,25 @@ or any branch you based on
 ===========================================
 add something on chapter3_branch_testing_another
 to move it forward
+
+============================================
+this is added on 2021-04-18
+after some basic merging and rebase
+now i only has master and chapter3_branch_testing.
+delete chapter3_branch_testing_another after merging it with master.
+since chapter3_branch_testing_another is one step forward with chapter3_branch_testing
+then i rebase the master code with the current chapter3_branch_testing
+
+如果想把不稳定的code搞到master，用merge
+如果想把master别人的code搞到自己的branch，用rebase
+这两个方法都有可能会出现confilict
+当confilict出现时，需要修改文件，再次commit来修复。
+修复conflict的过程就是保留啥代码，不要啥代码的过程。
+
+git branch
+* chapter3_branch_testing
+  master
+
+after checkin this.
+start the new learning.
+==========================================
