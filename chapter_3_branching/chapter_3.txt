@@ -259,3 +259,28 @@ expected some errors.
 need to pull, then push
 
 ======================================
+
+在push之前先pull
+就像在checking之前先get latest一样
+先把代码merge好，在push到远程服务器叫大家下载。
+
+=====================================
+
+check the tracking branch
+git branch -vv
+* chapter3_branch_1 638619b [origin/chapter3_branch_1] merge to fix conflix
+  master            2e5fb6f [origin/master] add some data on the ubuntu pc to master branch.
+
+===============================================
+
+rebase 
+把自己的修改重新加载到已经比你靠前的branch上边，这个叫rebase
+
+rebase 和 merge都是git 处理多个branch之间代码合并的套路
+而 colone fetch pull push 都是在处理单个branch上地事情
+
+从例子上来看
+merge用于把自己的开发 branch的代码合并到稳定的master branch。
+rebase 更像是把master的稳定代码，rebase到自己的开发branch。
+
+================================================
