@@ -104,3 +104,24 @@ start the new learning.
 开始新的联系
 此时刻，master和chapter3_branch_testing是一致的
 git swith chapter3_branch_testing
+
+make change on chapter3_branch_testing
+then merge it to master to make a Fast-forward merge
+
+git merge chapter3_branch_testing
+Updating f942f3c..ff6d4ec
+Fast-forward
+ chapter_3_branching/chapter_3.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+ 
+branch 是可以被delete掉的
+delete local branch
+git branch -d chapter3_branch_testing
+delete remote branch
+git push -d origin chapter3_branch_testing
+
+master没有什么特殊性
+你可以在chapter3_branch_testing 上 merge master branch 
+==========================================
+ 
+ 
