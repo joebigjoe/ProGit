@@ -348,3 +348,12 @@ test 1 frist change during the chapter3_branch_1 developing
 test 2 frist change during the chapter3_branch_1 developing
 *******************************************
 
+====================================
+
+这个实验告诉我们
+所有的rebase都是把master的修改放在我们自己修改的下边。
+这样我们就可以用git commit --amend来修改我们自己的commit
+现在终于明白了谷歌的工作方法。
+
+====================================
+
