@@ -294,3 +294,8 @@ test fetch.
 this is add on master to test rebase on windows PC
 
 =======================================
+
+从dev branch rebase之后
+一般会从master merge 一个 dev 吗？
+
+======================================
