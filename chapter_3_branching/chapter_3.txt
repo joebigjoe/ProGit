@@ -320,6 +320,19 @@ to see if the commit message is added to the rebase.
 
 ======================================
 
+当我们从chapter3_branch_1上rebase master的时候
+这时候从chapter3_branch_1的commit list 你会先看到来自master的commit
+然后是chapter3_branch_1上自己的commit
+而且当有conflict的时候，不会有多余的commit message进来。
+这样就看着很clean。
+
+git log --oneline
+74cba1d (HEAD -> chapter3_branch_1, master) add the epub version of GitPro book to my repo for future usage.
+69bbe6c add message for git basic rebase
+cba3568 add the pdf version of progit book to master branch. // 这个是master的commit，先加进来，上边两个是chapter3_branch_1自己commit
+
+====================================
+
 **************************************
 test 1 frist change during the chapter3_branch_1 developing
 *******************************************
@@ -327,3 +340,4 @@ test 1 frist change during the chapter3_branch_1 developing
 **************************************
 test 2 frist change during the chapter3_branch_1 developing
 *******************************************
+
