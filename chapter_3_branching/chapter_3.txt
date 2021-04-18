@@ -153,6 +153,17 @@ git 需要你修复这些conflict，然后才允许你进行commit
 
 ==========================================
 
+branch management
+git branch -v
+git branch --merged
+git branch --no--merged
+
+看看没有merge到master的branch
+git branch --no-merged master
+
+git switch 会直接帮你switch 
+git checkout 会教你保存数据在变switch
+所以 git checkout 安全些？
 
 
 
