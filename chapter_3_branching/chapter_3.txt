@@ -357,3 +357,14 @@ test 2 frist change during the chapter3_branch_1 developing
 
 ====================================
 
+do not rebase commits that exist outside your repository
+and that people may have based work on.
+
+rebase local changes before pushing to clean up your work.
+but never rebase anything that you have pushed somewhere.
+
+rebase 只在没有push过的local branch上使用
+一旦push上remote就会影响别人，也不要自己使用别人的snapshot来做rebase的基础。
+这句没咋看懂。。。。。。
+
+====================================
