@@ -205,7 +205,6 @@ add some very good picture to the repo.
 
 ========================================
 
-<<<<<<< HEAD
 remote branch
 远程的repository
 git remote show
@@ -289,12 +288,5 @@ rebase 更像是把master的稳定代码，rebase到自己的开发branch。
 add some comment on the ubuntu pc.
 so check the fetch and pull command.
 test fetch.
-=======
-add some comment on the ubuntu pc.
-so check the fetch and pull command.
-test fetch.
 
 =======================================
->>>>>>> 2e5fb6fa06ba60cc0c93072d23b9b6221d33475e
-
-================================================
