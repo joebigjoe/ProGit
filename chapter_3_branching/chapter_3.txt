@@ -243,15 +243,16 @@ git pull把远程服务的branch拉到本地，并马上进行merge
 
 ======================================
 
-
-
-
-
-
 add some test string on the chapter3_branch_1
 to test fetch and pull.
 
 =======================================
+
+when we push stuff to a server.
+we need to pull first.
+otherwise git will throw error is server has more snapshots.
+
+======================================
 
 test push when remote branch has more snapshot.
 expected some errors.
