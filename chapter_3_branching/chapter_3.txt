@@ -315,3 +315,7 @@ then appy to our change also to the latest.
 
 ======================================
 
+test data for conflict data on master.
+to see if the commit message is added to the rebase.
+
+======================================
