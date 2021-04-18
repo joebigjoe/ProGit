@@ -101,3 +101,6 @@ git branch
 after checkin this.
 start the new learning.
 ==========================================
+开始新的联系
+此时刻，master和chapter3_branch_testing是一致的
+git swith chapter3_branch_testing
