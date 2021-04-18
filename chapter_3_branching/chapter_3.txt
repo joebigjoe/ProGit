@@ -333,6 +333,13 @@ cba3568 add the pdf version of progit book to master branch. // 这个是master�
 
 ====================================
 
+test no more merge conflict commit entry on the list
+git log --oneline --decorate
+415d9cc (HEAD -> chapter3_branch_1) add no conflict rebase test.
+d453aa0 (master) add conflict data for rebase test.
+it is pretty clean.
+
+====================================
 **************************************
 test 1 frist change during the chapter3_branch_1 developing
 *******************************************
