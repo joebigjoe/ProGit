@@ -104,3 +104,10 @@ start the new learning.
 开始新的联系
 此时刻，master和chapter3_branch_testing是一致的
 git swith chapter3_branch_testing
+
+==========================================
+this is a test for hotfix_110.
+i will add this, then merge to master.
+this will make master branch moving forward for chapter3_branch_testing.
+and we will see some conflict when merge master to chapter3_branch_testing.
+==========================================
