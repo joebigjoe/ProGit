@@ -224,6 +224,27 @@ will test the fetch command on master
 
 =====================================
 
+git status
+On branch chapter3_branch_1
+Your branch is ahead of 'origin/chapter3_branch_1' by 1 commit.
+  (use "git push" to publish your local commits)
+  
+origin/chapter3_branch_1 is the remote branch.
+origin/chapter3_branch_1 是服务器上的branch
+chapter3_branch_1 是本地的branch
+
+如果没有任何的network 操作
+远程的branch指针是不会变的
+
+git fetch 会把远程服务器的branch下载到本地。
+但是并不与当前你正在work的local branch merge
+
+git pull把远程服务的branch拉到本地，并马上进行merge
+
+======================================
+
+
+
 
 
 
