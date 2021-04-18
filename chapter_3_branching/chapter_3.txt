@@ -205,5 +205,9 @@ add some very good picture to the repo.
 
 ========================================
 
+add some comment on the ubuntu pc.
+so check the fetch and pull command.
+test fetch.
 
+=======================================
 
