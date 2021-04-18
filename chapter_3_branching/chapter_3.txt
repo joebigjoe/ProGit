@@ -185,4 +185,25 @@ git push origin --delete chapter3_branch_testing
 
 ========================================
 
+branching workflow
+一般怎么用branch
+
+long running branch 长期维护的几个branch
+master branch=》 最稳定的代码
+developing branch=》 不是最稳定的，但是是集成的已经经过测试的topic branch，正在开的的下一个版本的最终要release的东西
+topic branch=》 这个会有很多，类似一个个的issue
+topic 的经过测试之后merge到developing，developing经过测试之后merge到master
+这样对于顶层master来说永远都是fast forward，只接受最稳定的代码。
+develop和merge阶段会有three-way merge
+
+add some very good picture to the repo.
+
+注意：
+所有的branching and merging 都是在本地发生的。
+我们在没有push之前，所有的操作都是在本地发生的。
+这也是git第一章说的，差不多所有的操作都在本地发生。
+
+========================================
+
+
 
