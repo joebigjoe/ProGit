@@ -283,4 +283,10 @@ rebase 和 merge都是git 处理多个branch之间代码合并的套路
 merge用于把自己的开发 branch的代码合并到稳定的master branch。
 rebase 更像是把master的稳定代码，rebase到自己的开发branch。
 
+=======================================
+
+add some comment on the ubuntu pc.
+so check the fetch and pull command.
+test fetch.
+
 ================================================
