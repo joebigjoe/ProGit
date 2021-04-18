@@ -299,3 +299,19 @@ this is add on master to test rebase on windows PC
 一般会从master merge 一个 dev 吗？
 
 ======================================
+
+实验结果是git rebase 会没有太多无聊的记录
+
+git switch chapter3_branch_1
+git rebase master
+// some conflict. but no extra info
+git add -A
+git rebase -- continue
+// that is it
+
+once master is update, we can always rebase / rebase / rebase
+this way we can always has the latest master branch.
+then appy to our change also to the latest.
+
+======================================
+
