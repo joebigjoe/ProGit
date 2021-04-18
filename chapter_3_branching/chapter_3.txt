@@ -319,3 +319,7 @@ test data for conflict data on master.
 to see if the commit message is added to the rebase.
 
 ======================================
+
+**************************************
+test 1 frist change during the chapter3_branch_1 developing
+*******************************************
