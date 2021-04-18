@@ -252,3 +252,9 @@ add some test string on the chapter3_branch_1
 to test fetch and pull.
 
 =======================================
+
+test push when remote branch has more snapshot.
+expected some errors.
+need to pull, then push
+
+======================================
