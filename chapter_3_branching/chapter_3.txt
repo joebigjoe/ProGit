@@ -1,6 +1,8 @@
 第三章 branching
 the killer feature of git
 
+---------------------------------------------------
+
 branch是指向某个commit snapshot的指针。
 
 the master branch 并不是特殊的branch。
@@ -11,6 +13,9 @@ git branch chapter3_branch_testing
 
 HEAD 一个特殊的指针
 指向的是你当前的branch的位置
+chapter3_branch_testing
+
+---------------------------------------------------
 
 ========================================
 add some modification on master branch and commit
@@ -18,3 +23,59 @@ so master branch also moving forward after the creation of branch chapter3_branc
 as as test for future merging
 ========================================
 
+
+============================================
+此节点之前的内容是我们创建这个branch的时刻
+master所保存的snapshot
+我们创建branch应该是在我们想map的branch完成所有的commit之后，要不然就会丢掉下边的东西
+我创建chapter3_branch_testing的时候 master还有下边的东西没有commit
+也就是说我建branch建造了。
+我要在这些东西都commit之后再建立我自己的branch，这些东西就不会丢了。
+branch 是指向你创建branch的时候的最近的一次commit的snapshot。 再次验证了一次。
+
+----------------------------------------------------
+
+-----
+    |
+-----
+
+里的东西是从master 拷贝过来的
+下边才是我的增加的内容：
+但是现在的commit会到新的branch里边
+
+HEAD 一个特殊的指针
+指向的是你当前的branch的位置
+git log --oneline --decorate
+ab25e52 (HEAD -> chapter3_branch_testing) initial commit for chapter 3
+
+====================================================
+this is the work i done when i at home and on my Centos client
+shold be fine to continue read this book.
+
+the first thing i do when i clone the code:
+git remote show origin
+it shows all the branch
+
+then i check out chapter3_branch_testing
+git checkout chapter3_branch_testing
+
+to see all the branches, you can also use another command
+git log -all
+git log --all --oneline --decorate
+
+swich branch will change the files on your working folder.
+if git can not do it cleanly, it will not let you proceed.
+git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+	chapter_3_branching/chapter_3.txt
+Please commit your changes or stash them before you switch branches.
+
+it will show errors or warning, so you would notice ans take actions.
+
+git log --oneline --decorate  --graph --all 
+--graph will show you how far away you diverge from the master branch
+or any branch you based on
+ 
+===========================================
+add something on chapter3_branch_testing_another
+to move it forward
