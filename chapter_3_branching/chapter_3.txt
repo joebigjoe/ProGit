@@ -130,3 +130,30 @@ i will add this, then merge to master.
 this will make master branch moving forward for chapter3_branch_testing.
 and we will see some conflict when merge master to chapter3_branch_testing.
 ==========================================
+
+Basic merge
+1. Fast-forward merge
+2. three-way merge
+还是刚才的例子，我们在master上做了新的hotfix_110。这是master的HEAD向前移动了一个snapshot。
+我们在chapter3_branch_testing的修改也使我们在chapter3_branch_testing branch上前移。
+这个时候chapter3_branch_testing和hotfix_110有共同的父snapshot。
+这个时候如果把chapter3_branch_testing merge到master，就会产生three-way merge。
+three-way = chapter3_branch_testing， hotfix_110， chapter3_branch_testing和hotfix_110有共同的父snapshot
+一起产生一个新的snapshot
+
+===========================================
+
+Merge conflict
+当你的chapter3_branch_testing的修改，也修改到了hotfix_110里的文件
+这个时候就会产生Merge conflict
+git 需要你修复这些conflict，然后才允许你进行commit
+修复conflict的过程就是保留啥代码，不要啥代码的过程。
+还是要作者知道自己想要什么。
+这可能也是git的基本要求吧。
+
+==========================================
+
+
+
+
+
