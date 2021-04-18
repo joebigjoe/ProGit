@@ -205,6 +205,27 @@ add some very good picture to the repo.
 
 ========================================
 
+remote branch
+远程的repository
+git remote show
+git remote show origin
+git ls-remote origin
+
+"origin/master" "origin/chapter3_branch_1"
+
+just like "master", "origin" is also not special
+
+git colone git@github.com:joebigjoe/ProGit.git -o XXXXX
+那么你的origin就会变成XXXXX
+"XXXXX/master" "XXXXX/chapter3_branch_1"
+
+add something on other PC for master.
+will test the fetch command on master
+
+=====================================
+
+
+
 
 add some test string on the chapter3_branch_1
 to test fetch and pull.
