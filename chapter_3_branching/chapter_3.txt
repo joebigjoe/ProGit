@@ -124,4 +124,9 @@ master没有什么特殊性
 你可以在chapter3_branch_testing 上 merge master branch 
 ==========================================
  
- 
+==========================================
+this is a test for hotfix_110.
+i will add this, then merge to master.
+this will make master branch moving forward for chapter3_branch_testing.
+and we will see some conflict when merge master to chapter3_branch_testing.
+==========================================
