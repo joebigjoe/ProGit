@@ -165,6 +165,24 @@ git switch 会直接帮你switch
 git checkout 会教你保存数据在变switch
 所以 git checkout 安全些？
 
+========================================
 
+修改branch name
+修改本地
+git branch --move bad-branch-name good-branch-name
+把本地修改新名字-good-branch-name推向remote
+git push --set-upstream orign good-branch-name
+把远程的就名字-ad-branch-name删除掉
+git push orign --delete bad-branch-name
+
+实验：也就是说和base在chapter3_branch_testing新建一个chapter3_branch_1，再把chapter3_branch_testing删掉没啥区别
+git branch --move chapter3_branch_testing chapter3_branch_1
+git push --set-upstream origin chapter3_branch_1
+git push origin --delete chapter3_branch_testing
+
+一般情况下不要改名字
+更不要改master的名字，很多工具会引用这些长久默认的名字。
+
+========================================
 
 
