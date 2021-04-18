@@ -206,4 +206,7 @@ add some very good picture to the repo.
 ========================================
 
 
+add some test string on the chapter3_branch_1
+to test fetch and pull.
 
+=======================================
